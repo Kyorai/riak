@@ -7,6 +7,9 @@ ERLANG_BIN       = $(shell dirname $(shell which erl 2>/dev/null) 2>/dev/null)
 REBAR           ?= $(BASE_DIR)/rebar
 OVERLAY_VARS    ?=
 
+# To deal with the missing basho artifacts"
+ARTIFACT_URL_PREFIX ?= "https://files.tiot.jp/riak"
+
 RIAK_CORE_STAT_PREFIX = riak
 export RIAK_CORE_STAT_PREFIX
 
