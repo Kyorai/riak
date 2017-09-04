@@ -23,7 +23,7 @@ $(if $(ERLANG_BIN),,$(warning "Warning: No Erlang found in your path, this will 
 all: deps compile
 
 compile:
-	./rebar compile
+	ARTIFACT_URL_PREFIX=$(ARTIFACT_URL_PREFIX) ./rebar compile
 
 deps:
 	$(if $(HEAD_REVISION),$(warning "Warning: you have checked out a tag ($(HEAD_REVISION)) and should use the locked-deps target"))
